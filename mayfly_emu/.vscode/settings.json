@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "mayfly_isa.h": "c",
+        "*.tcc": "cpp",
+        "unistd.h": "c",
+        "fcntl.h": "c"
+    }
+}
