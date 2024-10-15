@@ -71,27 +71,27 @@ uint64_t vaddr_ifetch(uint64_t addr, int len){
 	// 	printf("fdt_getprop\n");
 	// }
 	//--------------
-	if(addr == 0x00000000000fa598){
-		printf("run\n");
-	}else if(addr == 0xffffffff80601280){
-		printf("kernel_init_freeable\n");
-	}else if(addr == 0xffffffff806091b8){
-		printf("workqueue_init\n");
-	}else if(addr == 0xffffffff8060ea94){
-		printf("init_mm_internals\n");
-	}else if(addr == 0xffffffff803123d4){
-		printf("refcount_warn_saturate\n");
-	}else if(addr == 0xffffffff8056b494){
-		printf("mutex_lock\n");
-	}else if(addr == 0xffffffff806091f0){
-		printf("workqueue_init in mutex_lock after\n");
-	}else if(addr == 0xffffffff800246d8){
-		printf("create_worker\n");
-	}else if(addr == 0xffffffff80609340){
-		printf("workqueue_init is can end\n");
-	}else if(addr == 0xffffffff80609398){
-		printf("workqueue_init can ret\n");
-	}
+	// if(addr == 0x00000000000fa598){
+	// 	printf("run\n");
+	// }else if(addr == 0xffffffff80601280){
+	// 	printf("kernel_init_freeable\n");
+	// }else if(addr == 0xffffffff806091b8){
+	// 	printf("workqueue_init\n");
+	// }else if(addr == 0xffffffff8060ea94){
+	// 	printf("init_mm_internals\n");
+	// }else if(addr == 0xffffffff803123d4){
+	// 	printf("refcount_warn_saturate\n");
+	// }else if(addr == 0xffffffff8056b494){
+	// 	printf("mutex_lock\n");
+	// }else if(addr == 0xffffffff806091f0){
+	// 	printf("workqueue_init in mutex_lock after\n");
+	// }else if(addr == 0xffffffff800246d8){
+	// 	printf("create_worker\n");
+	// }else if(addr == 0xffffffff80609340){
+	// 	printf("workqueue_init is can end\n");
+	// }else if(addr == 0xffffffff80609398){
+	// 	printf("workqueue_init can ret\n");
+	// }
 	// else if(addr == 0x0000000000013c7c){
 	// 	printf("full_write\n");
 	// }else if(addr == 0x000000000011ba30){
@@ -119,27 +119,27 @@ uint64_t vaddr_ifetch(uint64_t addr, int len){
 	// }else if(addr == 0xffffffff803f2360){
 	// 	printf("uartlite_outle32\n");
 	// }
-	else if(addr == 0xffffffff803f02d4){
-		printf("uart_write,a0 %lx\n",cpu.gpr[10]);
-	}else if(addr == 0xffffffff803cc9b4){
-		printf("file_tty_write\n");
-	}else if(addr == 0xffffffff803c89c4){
-		printf("xingk_signal_pending , a0 0x%lx\n",cpu.gpr[10]);
-	}else if(addr == 0xffffffff803c896c){
-		printf("xingk_iov_iter_count, a0 %lx\n",cpu.gpr[10]);
-	}else if(addr == 0xffffffff803cc6f0){
-		printf("do_tty_write_xingk\n");
-	}else if(addr == 0xffffffff803c8990){
-		printf("xingk_line, a0 %lx\n",cpu.gpr[10]);
-	}else if(addr == 0xffffffff803c8b20){
-		printf("tty_put_char\n");
-	}else if(addr == 0xffffffff803cef10){
-		printf("n_tty_write\n");
-	}else if(addr == 0xffffffff803f370c){
-		printf("ulite_isr\n");
-	}else if(addr == 0xffffffff803f2f0c){
-		printf("ulite_transmit\n");
-	}
+	// else if(addr == 0xffffffff803f02d4){
+	// 	printf("uart_write,a0 %lx\n",cpu.gpr[10]);
+	// }else if(addr == 0xffffffff803cc9b4){
+	// 	printf("file_tty_write\n");
+	// }else if(addr == 0xffffffff803c89c4){
+	// 	printf("xingk_signal_pending , a0 0x%lx\n",cpu.gpr[10]);
+	// }else if(addr == 0xffffffff803c896c){
+	// 	printf("xingk_iov_iter_count, a0 %lx\n",cpu.gpr[10]);
+	// }else if(addr == 0xffffffff803cc6f0){
+	// 	printf("do_tty_write_xingk\n");
+	// }else if(addr == 0xffffffff803c8990){
+	// 	printf("xingk_line, a0 %lx\n",cpu.gpr[10]);
+	// }else if(addr == 0xffffffff803c8b20){
+	// 	printf("tty_put_char\n");
+	// }else if(addr == 0xffffffff803cef10){
+	// 	printf("n_tty_write\n");
+	// }else if(addr == 0xffffffff803f370c){
+	// 	printf("ulite_isr\n");
+	// }else if(addr == 0xffffffff803f2f0c){
+	// 	printf("ulite_transmit\n");
+	// }
     int check_type = isa_mmu_check(addr,len,MEM_TYPE_IFETCH);
     uint64_t rdata=0;
     switch(check_type){

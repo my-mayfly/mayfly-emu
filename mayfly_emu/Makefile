@@ -36,11 +36,12 @@ VPATH += $(SRC_DIRS) ./utils
 
 LDFLAGS += $(shell llvm-config --libs)
 
+BIN_PATH_DIR = $(shell pwd)
 #IMG_FILE ?= --img=/home/xingk/risc-v_w_H/linux_bin/fw_payload.bin
-IMG_FILE ?= --img=/home/xingk/risc-v_w_H/opensbi/build/platform/fpga/mayfly/firmware/fw_payload.bin
+IMG_FILE ?= --img=$(BIN_PATH_DIR)/fw_payload.bin
 #KERNEL_FILE ?= --kernel=/home/xingk/risc-v_w_H/linux_bin/Image
-KERNEL_FILE ?= --kernel=/home/xingk/risc-v_w_H/linux-kernel/linux/arch/riscv/boot/Image
-SYSTEM_FILE ?= --file-system=/home/xingk/risc-v_w_H/linux_bin/rootfs2.img
+KERNEL_FILE ?= --kernel=$(BIN_PATH_DIR)/Image
+SYSTEM_FILE ?= --file-system=$(BIN_PATH_DIR)/rootfs2.img
 # Compilation patterns
 $(OBJ_DIR)/%.o: %.c
 	echo + CC $<
