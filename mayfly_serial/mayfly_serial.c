@@ -48,19 +48,6 @@ int main(){
 	int result1;
 	pthread_t thread_id1;
 	result1 = pthread_create(&thread_id1, NULL, get_info_from_serial, NULL);
-	// int i =0;
-	// while(1){
-	// 	if(i%100000000000==0)printf("rflag 0x%lx,%d\n",(u_int64_t)&rflag,rflag);
-	// 	if(rflag){
-	// 		printf("rflag 0x%lx\n",(u_int64_t)&rflag);
-	// 		printf("aa\n");
-	// 		printf("send:%s\n",rx_fifo);
-	// 		memcpy(shared_data->rx_fifo,rx_fifo,250);
-	// 		shared_data->r_ok = 1;
-	// 		rflag = 0;
-	// 	}
-	// 	i++;
-	// }
 
     // 等待子线程结束
     result = pthread_join(thread_id, NULL);
